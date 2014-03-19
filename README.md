@@ -1,0 +1,4 @@
+Horoscopes
+==========
+
+Programmed in Java
