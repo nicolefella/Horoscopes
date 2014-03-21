@@ -6,9 +6,9 @@
 **/
 public class NumberscopeEngine implements HoroscopeEngine
 {
-	//generate two randome numbers between 0 and 10 to be used later
-	int randOne = (int)(Math.random()*10);
-	int randTwo = (int)(Math.random()*10);
+	//instance fields randOne and randTwo to be used later
+	int randOne;
+	int randTwo;
 
 	//create parts of sentence to be used in concatinated String for horoscope
 	String[] numberscopeArray = {"Today is the perfect day to spot ", 
@@ -19,6 +19,10 @@ public class NumberscopeEngine implements HoroscopeEngine
 
 	public String getHoroscope()
 	{
+		//randomize numbers between 0 and 10
+		randOne = (int)(Math.random()*10);
+		randTwo = (int)(Math.random()*10);
+
 		//update concatinated String according to random numbers generated 
 		concatNumberscope = numberscopeArray[0] + randOne 
 			+ numberscopeArray[1] + randTwo + numberscopeArray[2];

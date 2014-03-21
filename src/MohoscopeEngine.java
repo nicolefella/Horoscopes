@@ -7,10 +7,10 @@
 
 public class MohoscopeEngine implements HoroscopeEngine
 {
-	//create randomly generated number to determine which of the Moho Places 
-	int randOne = (int)(Math.random()*4);
-	int randTwo = (int)(Math.random()*4);
-	int randThree = (int)(Math.random()*4);
+	//instance fields randOne, randTwo and randThree to be used later
+	int randOne;
+	int randTwo;
+	int randThree;
 
 	//array of Moho Places
 	String[] mohoPlaces = {"Clapp", "Kendade", "Skinner Green", 
@@ -25,8 +25,15 @@ public class MohoscopeEngine implements HoroscopeEngine
 
 	public String getHoroscope()
 	{
+		//generate random numbers for instance fields
+		int randOne = (int)(Math.random()*4);
+		int randTwo = (int)(Math.random()*4);
+		int randThree = (int)(Math.random()*4);
+
+		//create concatenated horoscope
 		concatString = mohoscopeArray[0] + mohoPlaces[randOne] + mohoscopeArray [1] 
 			+ mohoPlaces[randTwo] + mohoscopeArray [2] + mohoPlaces[randThree] + mohoscopeArray[3];
+		//return horoscope generated
 		return concatString;
 	}
 }
